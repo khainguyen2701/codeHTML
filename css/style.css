@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    height: 90px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1040;
+    background: rgba(255,255,255,0.9);
+    position: fixed;
+    top: 0;
+    background:transparent;
+}
+
+label a.logo{
+    font-size:35px;
+    font-weight: 700;
+    color: antiquewhite;
+    padding-left: 100px;
+    line-height: 80px;
+    text-decoration: none;
+}
+header .navbar{
+    float: right;
+    margin-right: 40px;
+    display: block;
+}
+header .navbar li{
+    display: inline-block;
+    margin: -5px 5px;
+    line-height: 80px;
+}
+header .navbar li a{
+    color: antiquewhite;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 12px;
+}
+header .navbar li a.active,
+header .navbar li a:hover{
+    border: 1px solid #fff;
+    background: #fff;
+    color:black;
+    border-radius: 5px;
+    transition: .5s ease-in-out ;
+}
+header .icon{
+    color: antiquewhite;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 40px;
+    line-height: 80px;
+    float: right;
+    display: none;
+}
+.once_pleace_header{
+    position: relative;
+    top: -90px;
+    background: url(../img/rc.jpg) no-repeat;
+    background-color: #34495e;
+    background-size: cover;
+    height: 140vh;
+}
+.text_tile_content{
+    position: relative;
+    top: 50%;
+    left: 10%;
+}
+.text_title{
+    text-transform: capitalize;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    color: white;
+}
+.btn_title{
+    margin: 50px 50px;
+    width: 200px;
+    height: 50px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: .5s;
+}
+.btn_title:hover{
+    
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
+.home_selector{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background: #eeecea;
+    position: relative;
+    top: -90px;
+    transition: .9s;
+}
+.home_selector:hover{
+    background: #34495e;
+}
+
+.title_selector, .btnLeft_selector{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.title_selector_product{
+    font-weight: 700;
+    font-size: 3rem;
+    color: burlywood;
+}
+.btnLeft_selector i{
+    font-size: 5rem;
+}
+
+@media (max-width:1048px) {
+    label a.logo{
+        font-size:25px;
+        font-weight: 700;
+        color: antiquewhite;
+        padding: 0 20px;
+        margin:15px 60px;
+    }
+    header ul{
+        margin-right: 20px;
+    }
+    header .navbar li a{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:985px) {
+    header label.icon{
+        display: inline-block;
+    }
+    header .navbar{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        left: -100%;
+        transition: all .5s;
+    }
+    header .navbar li{
+        display: block;
+    }
+    header ul.show{
+        left: 0;
+    }
+
+    .text_title{
+        font-size: 2.7rem;
+    }
+    .home_selector{
+        grid-template-columns: auto;
+    }
+    .title_selector_product{
+        font-weight: 700;
+        font-size: 3rem;
+    }
+    .btnLeft_selector i{
+        font-size: 5rem;
+    }
+    .avata_selector img{
+        width: 500px;
+        margin-left: 200px;
+    }
+}
+@media (max-width:740px) {
+    .text_title{
+        font-size: 2.2rem;
+    }
+    .home_selector{
+        grid-template-columns: auto;
+    }
+    .title_selector_product{
+        font-weight: 600;
+        font-size: 3rem;
+    }
+    .btnLeft_selector i{
+        font-size: 5rem;
+    }
+    .avata_selector img{
+        width: 400px;
+        margin-left: 170px;
+    }
+}
+@media (max-width:418px) {
+    header label.icon{
+        display: inline-block;
+        font-size: 20px;
+    }
+    label a.logo{
+        font-size:15px;
+        font-weight: 700;
+        padding: 0 5px;
+        line-height: 80px;
+    }
+    .text_title{
+        font-size: 2.9rem;
+    }
+    .home_selector{
+        grid-template-columns: auto;
+    }
+    .title_selector_product{
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    .btnLeft_selector i{
+        font-size: 3rem;
+    }
+    .avata_selector img{
+        width: 250px;
+        margin-left: 50px;
+    }
+}
