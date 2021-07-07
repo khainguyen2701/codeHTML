@@ -1,9 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     overflow-x: hidden;
+    
+    font-family: "Poppins", sans-serif;
+}
+
+
+body .tabUI {
+    margin: 0 auto;
+    max-width: 1220px;
+    
 }
 header{
     height: 90px;
@@ -173,6 +183,63 @@ header .icon{
     padding: 10px;
 }
 
+/**/
+.tabs {
+    display: flex;
+    position: relative;
+  }
+  .tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+  }
+  .tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #c23564;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+  }
+  .tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+  }
+  .tab-item.active {
+    opacity: 1;
+  }
+  .tab-content {
+    padding: 28px 0;
+  }
+  .tab-pane {
+    color: #333;
+    display: none;
+  }
+  .tab-pane.active {
+    display: block;
+  }
+  .tab-content .tab-pane .img-tab-pane img{
+      border: 2px solid #fff;
+      border-radius: 5px;
+  }
 
 
 @media (max-width:1048px) {
@@ -189,6 +256,17 @@ header .icon{
     header .navbar li a{
         font-size: 1rem;
     }
+    .tab-content .tab-pane .img-tab-pane img{
+        width: 32%;
+        margin-left: 6px;
+    }
+   
+    .tab-item {
+        min-width: 80px;
+        padding: 16px 20px 11px 20px;
+        font-size: 20px;
+        margin: 0 auto;
+      }
 }
 
 @media (max-width:985px) {
@@ -249,6 +327,17 @@ header .icon{
         width: 400px;
         margin-left: 170px;
     }
+    .tab-content .tab-pane .img-tab-pane img{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .tab-item {
+        min-width: 80px;
+        padding: 16px 20px 11px 20px;
+        font-size: 20px;
+        margin: 0 auto;
+      }
 }
 @media (max-width:418px) {
     header label.icon{
@@ -278,4 +367,13 @@ header .icon{
         width: 250px;
         margin-left: 50px;
     }
+    .tab-content .tab-pane .img-tab-pane img{
+        width: 100%;
+    }
+    .tab-item {
+        min-width: 50px;
+        padding: 12px 15px 6px 15px;
+        font-size: 15px;
+        margin: 0 auto;
+      }
 }
